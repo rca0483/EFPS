@@ -13,7 +13,14 @@ namespace EFPS.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            Models.People person = new Models.People();
+
+            Models.EFPSEntities entities = new Models.EFPSEntities();
+
+            Models.PII result = entities.PIIs.FirstOrDefault();  
+            person.LastName = result.LastName;
+            person.FirstName = result.FirstName;        
+            return View(person);
         }
 
     }

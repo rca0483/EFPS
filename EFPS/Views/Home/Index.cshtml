@@ -1,13 +1,25 @@
-﻿
+﻿@model EFPS.Models.People
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script>
     $(document).ready(function () {
-        $("p").fadeOut().fadeIn();
+        go();
+        setInterval(go, 1000);
     });
+    function go() { $("p").fadeOut().fadeIn(); }
 </script>
-<p>
+<p>    
     Electronic Funds Processing System
 </p>
+    <ul>
+        <li>
+            First: @Html.DisplayFor(m => m.FirstName)
+        </li>
+        <li>
+            Last: @Html.DisplayFor(m => m.LastName)
+        </li>
+        
+    </ul>
+    
