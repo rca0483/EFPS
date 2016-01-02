@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EFPS.Models;
 
 namespace EFPS.Controllers
 {
@@ -13,14 +14,9 @@ namespace EFPS.Controllers
 
         public ActionResult Index()
         {
-            Models.People person = new Models.People();
-
-            Models.EFPSEntities entities = new Models.EFPSEntities();
-
-            Models.PII result = entities.PIIs.FirstOrDefault();  
-            person.LastName = result.LastName;
-            person.FirstName = result.FirstName;        
-            return View(person);
+            EFPSEntities entities = new EFPSEntities();
+            PII result = entities.PIIs.FirstOrDefault();
+            return View(result);
         }
 
     }

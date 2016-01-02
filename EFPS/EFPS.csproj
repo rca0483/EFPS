@@ -146,7 +146,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EFPS_Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\PeopleModel.cs" />
     <Compile Include="Models\PII.cs">
       <DependentUpon>EFPS_Model.tt</DependentUpon>
     </Compile>
