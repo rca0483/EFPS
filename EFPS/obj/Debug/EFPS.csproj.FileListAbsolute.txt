@@ -19,6 +19,7 @@ C:\inetpub\wwwroot\EFPS\EFPS\bin\System.Web.Razor.xml
 C:\inetpub\wwwroot\EFPS\EFPS\bin\System.Web.WebPages.xml
 C:\inetpub\wwwroot\EFPS\EFPS\bin\System.Web.WebPages.Deployment.xml
 C:\inetpub\wwwroot\EFPS\EFPS\bin\System.Web.WebPages.Razor.xml
-C:\inetpub\wwwroot\EFPS\EFPS\obj\Debug\EFPS.csprojResolveAssemblyReference.cache
 C:\inetpub\wwwroot\EFPS\EFPS\obj\Debug\EFPS.dll
 C:\inetpub\wwwroot\EFPS\EFPS\obj\Debug\EFPS.pdb
+C:\inetpub\wwwroot\EFPS\EFPS\bin\EntityFramework.SqlServer.dll
+C:\inetpub\wwwroot\EFPS\EFPS\bin\EntityFramework.SqlServer.xml
