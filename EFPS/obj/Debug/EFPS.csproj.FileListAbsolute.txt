@@ -23,4 +23,3 @@ C:\inetpub\wwwroot\EFPS\EFPS\obj\Debug\EFPS.dll
 C:\inetpub\wwwroot\EFPS\EFPS\obj\Debug\EFPS.pdb
 C:\inetpub\wwwroot\EFPS\EFPS\bin\EntityFramework.SqlServer.dll
 C:\inetpub\wwwroot\EFPS\EFPS\bin\EntityFramework.SqlServer.xml
-C:\inetpub\wwwroot\EFPS\EFPS\obj\Debug\EFPS.csprojResolveAssemblyReference.cache

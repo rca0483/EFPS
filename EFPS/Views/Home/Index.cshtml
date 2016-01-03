@@ -1,25 +1,58 @@
-﻿@model EFPS.Models.PII
+﻿@model List<EFPS.Models.PII>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Electronic Funds Processing System";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script>
     $(document).ready(function () {
         go();
         setInterval(go, 1000);
+        $("#PeopleTable").jqGrid({
+            url: 'Home/ExampleTable',
+            datatype: "json",
+            colNames: ['First Name', 'Last Name'],
+            colModel: [
+                { name: 'FirstName', index: 'FirstName' },
+                { name: 'LastName', index: 'LastName' }
+            ],
+            viewrecords: true,
+            sortorder: "desc",
+            caption: "EFPS Example"
+        });
     });
     function go() { $("p").fadeOut().fadeIn(); }
 </script>
-<p>    
+<style>
+    td, th
+    {
+        text-align: left;
+        padding: 5px;
+    }
+</style>
+<p>
     Electronic Funds Processing System
 </p>
-    <ul>
-        <li>
-            First: @Html.DisplayFor(m => m.FirstName)
-        </li>
-        <li>
-            Last: @Html.DisplayFor(m => m.LastName)
-        </li>
+@*<table id="PeopleGrid">
+    <tr>
+        <th>First
+        </th>
+        <th>Last
+        </th>
+    </tr>
+    @{
+        foreach (var row in Model)
+        {
+           <tr>
+            <td>
+                @Html.DisplayFor(m => row.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(m => row.LastName)
+            </td>
+        </tr> 
+        }
+        }
         
-    </ul>
-    
+</table>*@
+<table id="PeopleTable"></table>
+

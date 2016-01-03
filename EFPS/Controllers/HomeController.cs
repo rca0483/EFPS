@@ -14,9 +14,27 @@ namespace EFPS.Controllers
 
         public ActionResult Index()
         {
+            return View();
+        }
+        public JsonResult ExampleTable() {
             EFPSEntities entities = new EFPSEntities();
-            PII result = entities.PIIs.FirstOrDefault();
-            return View(result);
+            IList<PII> people = (from FirstName in entities.PIIs select FirstName).ToList();
+            var jsondata = new
+            {
+                rows = new object[people.Count()]
+            };
+            int i=0;
+            foreach (var p in people)
+            {
+                jsondata.rows[i++] = new
+                {
+                    cell = new object[]{
+                        p.FirstName,
+                        p.LastName
+                    }
+                };
+            }
+            return Json(jsondata,JsonRequestBehavior.AllowGet);
         }
 
     }
